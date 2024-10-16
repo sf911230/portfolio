@@ -1,0 +1,324 @@
+@import "colors";
+
+// Global sections styling
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $white;
+  color: $white;
+  position: relative;
+  background-color: $black;
+
+  &-headline {
+    text-transform: uppercase;
+    font-size: 50px;
+
+    @media (min-width: 768px) {
+      font-size: 100px;
+    }
+
+    @media (min-width: 1920px) {
+      font-size: 120px;
+    }
+  }
+}
+
+//Welcome Section
+.welcome-section {
+  .section-headline {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  h3 {
+    text-align: right;
+    font-size: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+}
+
+//About me Section
+.about-me-section {
+  padding: 0 20px;
+  height: 100%;
+
+  .section-headline {
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 0;
+    height: 100vh;
+  }
+
+  .next-section-button {
+    left: 10px;
+    bottom: 0;
+    @media (min-width: 768px) {
+      left: auto;
+      bottom: 20px;
+    }
+  }
+}
+
+//Skills section
+.skills {
+  &-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-logo-wrapper {
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+
+    @media (min-width: 768px) {
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+    }
+
+    &.white-wrapper {
+      background-color: $white;
+      border-radius: 30%;
+      padding: 5px;
+      height: 30px;
+      width: 30px;
+
+      @media (min-width: 768px) {
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+
+  &-logo {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-level {
+    display: flex;
+    flex-direction: row;
+
+    &.level-one {
+      justify-content: left;
+    }
+
+    &.level-second {
+      justify-content: center;
+    }
+
+    &.level-third {
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        justify-content: right;
+      }
+    }
+  }
+
+  &-section {
+    .section-headline {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+  }
+}
+
+//React section
+.react-section {
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 100px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 150px;
+  }
+
+  .section-headline {
+    margin: 0;
+
+    @media (min-width: 768px) {
+      align-self: flex-start;
+    }
+  }
+
+  &-image {
+    height: 190px;
+    margin-top: 50px;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 50px;
+
+    @media (min-width: 768px) {
+      height: 320px;
+    }
+
+    @media (min-width: 1440px) {
+      align-self: flex-end;
+    }
+
+    @media (min-width: 1920px) {
+      height: 450px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-quote {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+
+    @media (min-width: 768px) {
+      align-self: flex-start;
+      margin-left: 100px;
+    }
+  }
+}
+
+//Projects section
+.projects {
+  &-section {
+    .section-headline {
+      margin: 0 0 50px 0;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+    }
+
+    .next-section-button {
+      @media (min-width: 768px) {
+        left: 40px;
+        bottom: 0;
+      }
+
+      @media (min-width: 1024px) {
+        left: auto;
+        bottom: 20px;
+      }
+    }
+  }
+
+  &-query-message {
+    font-size: 20px;
+  }
+}
+
+//Contact section
+.contact-section {
+  background-color: $lightGreen;
+  padding: 0 20px;
+  color: $black;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
+  .section-headline {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  &-logos {
+    .contact-icon {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// Light mode of the site
+.light {
+  .projects-card-container {
+    &::-webkit-scrollbar-thumb {
+      background-color: $black;
+    }
+  }
+
+  .modal-body {
+    color: $black;
+  }
+
+  .modal-content {
+    &:before {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .modal-close-button {
+    color: $black;
+  }
+
+  .media-content {
+    color: $black;
+  }
+
+  .projects-card {
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1), 3px 5px 10px $black;
+  }
+
+  .slide-info-img {
+    &.img-with-background {
+      background-color: transparent;
+    }
+  }
+  .slide-arrow {
+    background-color: transparent;
+  }
+
+  .section {
+    background-color: $white;
+    color: $black;
+  }
+
+  .contact-section {
+    color: $black;
+  }
+
+  .react-section-image {
+    background-color: transparent;
+  }
+
+  .media-container {
+    &.image-background {
+      .media-overlay {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .media-overlay {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
